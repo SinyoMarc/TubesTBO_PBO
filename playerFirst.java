@@ -7,9 +7,6 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 public class playerFirst extends JFrame {
    // Konstanta Baris Kolom
-   String seri = "Hasil Seri! States yang dilewati \nq0  0000O0000- \n ↓ 1 \nq1  X000O000O- \n ↓ 3 \nq10  XOX0O000O- \n ↓ 8 \nq44  XOXOO00XO- \n ↓ 6 \nq65  XOXOOXOXOd";
-   String menang = "Bot Menang! States yang dilewati \nq0  0000O0000- \n ↓ 6 \nq5  0000OX00O- \n  ↓ 1 \nq12  X000OXO0O- \n  ↓ 2 \nq49  XX00OXOOOw";
-
    public static final int BAR = 3;  // Baris
    public static final int KOL = 3;	 // Kolom
  
@@ -187,13 +184,13 @@ public class playerFirst extends JFrame {
             }
          } else if (stateSekarang == GameState.SERI) {
             statusBar.setForeground(Color.RED);
-            statusBar.setText("<html>" + seri.replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") + "</html>");
+            statusBar.setText("Hasil Seri! Klik Untuk Main Lagi.");
          } else if (stateSekarang == GameState.X_MENANG) {
             statusBar.setForeground(Color.RED);
             statusBar.setText("'X' Menang! Klik Untuk Main Lagi.");
          } else if (stateSekarang == GameState.O_MENANG) {
             statusBar.setForeground(Color.RED);
-            statusBar.setText("<html>" + menang.replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") + "</html>");
+            statusBar.setText("'O' Menang! Klik Untuk Main Lagi.");
          }
       }
    }
